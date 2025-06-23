@@ -1,1 +1,1 @@
-# industry-reference-data-framework
+# Industry Reference Data Framework
