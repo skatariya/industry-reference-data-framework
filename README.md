@@ -1,1 +1,1 @@
-# Industry Reference Data Framework
+# Industry Reference Data MCP
