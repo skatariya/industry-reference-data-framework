@@ -1,4 +1,4 @@
-"""Common MCP server configuration."""
+"""Shared FastMCP server instance used by all tools."""
 
 from fastmcp import FastMCP
 

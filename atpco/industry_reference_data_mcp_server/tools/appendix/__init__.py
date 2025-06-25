@@ -1,4 +1,4 @@
-"""Appendix tools for Industry Reference Data MCP server."""
+"""Tools for interacting with appendix reference data."""
 
 from .appendix_record_by_name_and_code import appendix_record_by_name_and_code
 

@@ -1,4 +1,4 @@
-"""Appendix tool for Industry Reference Data MCP server."""
+"""Tool for retrieving appendix records by name and code."""
 
 from ...common.decorators import handle_exceptions
 from ...common.server import mcp
@@ -11,16 +11,19 @@ async def appendix_record_by_name_and_code(
     name: str,
     code: str,
 ) -> str:
-    """Get appendix record by name and code.
+    """Return the appendix record identified by ``name`` and ``code``.
 
-    This tool returns information about Appendix record for a given name and code
+    Parameters
+    ----------
+    name:
+        The name of the appendix record.
+    code:
+        The appendix code to retrieve.
 
-    Parameters:
-        name (str): The name of the appendix record.
-        code (str): The code of the appendix record.
-
-    Returns:
-        str: A JSON string containing the appendix record information.
+    Returns
+    -------
+    str
+        A JSON string containing the appendix record information.
     """
     try:
         print(f"Received request for appendix record by name '{name}' and code '{code}'")   

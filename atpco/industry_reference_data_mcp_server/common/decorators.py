@@ -1,19 +1,23 @@
-"""Decorators for Industry Reference Data MCP Server."""
+"""Reusable decorators for the Industry Reference Data MCP server."""
 
 from functools import wraps
 from typing import Any, Callable
 
 def handle_exceptions(func: Callable) -> Callable:
-    """Decorator to handle exceptions in Industry Reference Data operations.
+    """Return ``func`` wrapped with generic exception handling.
 
-    Wraps the function in a try-catch block and returns any exceptions
-    in a standardized error format.
+    The decorated function executes inside a ``try``/``except`` block so that
+    uncaught exceptions are converted into a standardized error dictionary.
 
-    Args:
-        func: The function to wrap
+    Parameters
+    ----------
+    func:
+        The asynchronous function to wrap.
 
-    Returns:
-        The wrapped function that handles exceptions
+    Returns
+    -------
+    Callable
+        The wrapped function that handles exceptions.
     """
 
     @wraps(func)
