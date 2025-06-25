@@ -1,4 +1,4 @@
-"""ATPCO Industry Reference Data MCP Server implementation."""
+"""Entry point for running the Industry Reference Data MCP server."""
 
 import argparse
 from .common.server import mcp
@@ -8,8 +8,8 @@ from .tools import (
     appendix,
 )
 
-def main():
-    """Run the MCP server with CLI argument support."""
+def main() -> None:
+    """Run the MCP server with command-line argument support."""
     parser = argparse.ArgumentParser(
         description='An ATPCOs Model Context Protocol (MCP) server for interacting with Industry Reference Data'
     )

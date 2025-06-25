@@ -1,1 +1,1 @@
-"""Common package for Industry Reference Data MCP server."""
+"""Shared utilities for the Industry Reference Data MCP server."""

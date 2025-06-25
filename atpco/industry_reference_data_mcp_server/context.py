@@ -1,24 +1,22 @@
-"""Context management for Industry Reference Data MCP Server."""
+"""Manage runtime context for the Industry Reference Data MCP server."""
 
 class Context:
-    """Context class for Industry Reference Data MCP Server."""
+    """Holds global configuration for the MCP server."""
 
     _readonly = False
 
     @classmethod
-    def initialize(cls, readonly: bool = False):
+    def initialize(cls, readonly: bool = False) -> None:
         """Initialize the context.
 
-        Args:
-            readonly: Whether to run in readonly mode
+        Parameters
+        ----------
+        readonly:
+            Indicates whether the server should operate in read-only mode.
         """
         cls._readonly = readonly
 
     @classmethod
     def readonly_mode(cls) -> bool:
-        """Check if the server is running in readonly mode.
-
-        Returns:
-            True if readonly mode is enabled, False otherwise
-        """
+        """Return ``True`` if the server is running in read-only mode."""
         return cls._readonly
